@@ -1,0 +1,21 @@
+<%= form_for @trail do |f| %>
+  <p>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.label :difficulty %>
+    <%= f.text_field :difficulty %>
+  </p>
+  <p>
+    <%= f.submit 'Add Trail' %>
+  </p>
+<% end %>
+
+<% @trails.each do |trail| %>
+<ul>
+  <li>
+    <%= trail.name %>, <%= trail.difficulty %>
+  </li>
+</ul>
+<% end %>
