@@ -15,7 +15,7 @@
 <% @trails.each do |trail| %>
 <ul>
   <li>
-    <%= trail.name %>, <%= trail.difficulty %>
+    <%= link_to "#{trail.name}", trail_path(trail) %>, <%= trail.difficulty %>
   </li>
 </ul>
 <% end %>
